@@ -26,7 +26,7 @@ after_success:
 before_deploy:
 - ./gradlew desktop:dist
 - ./gradlew android:assembleRelease
-- mv desktop/build/libs/desktop-1.0.jar desktop/build/libs/AscendingEngine-$TRAVIS_TAG.jar
+- mv desktop/build/libs/desktop-0.1.0.jar desktop/build/libs/AscendingEngine-$TRAVIS_TAG.jar
 deploy:
   provider: releases
   api_key:
