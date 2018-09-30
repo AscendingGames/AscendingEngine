@@ -1,0 +1,9 @@
+codecov:
+  notify:
+    require_ci_to_pass: no
+
+codecov:
+  token: 6375b7d3-3df6-47cc-8312-04c9685c17b7
+  
+ignore:
+  - "**/view/*"         # Ignore View level code
