@@ -22,7 +22,7 @@ before_install:
 script:
 - "./gradlew clean test"
 after_success:
-- bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash) -t uuid-repo-token
 before_deploy:
 - ./gradlew desktop:dist
 - ./gradlew android:assembleRelease
@@ -42,3 +42,5 @@ deploy:
   on:
     repo: AscendingGames/AscendingEngine
     tags: true
+  env: 
+  - CODECOV_TOKEN="6375b7d3-3df6-47cc-8312-04c9685c17b7"
